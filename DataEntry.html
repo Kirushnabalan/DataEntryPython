@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Data Management System</title>
+    <link rel="stylesheet" href="DataEntry.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Research Data Management System</h1>
+        <div class="input-section">
+            <label for="experimentName">Experiment Name:</label>
+            <input type="text" id="experimentName">
+
+            <label for="date">Date (YYYY-MM-DD):</label>
+            <input type="text" id="date">
+
+            <label for="researcher">Researcher Name:</label>
+            <input type="text" id="researcher">
+
+            <label for="dataPoints">Data Points (comma-separated):</label>
+            <input type="text" id="dataPoints">
+
+            <button onclick="addEntry()">Add Entry</button>
+        </div>
+
+        <div class="entries-section">
+            <ul id="entriesList"></ul>
+        </div>
+
+        <div class="buttons">
+            <button onclick="exportToCSV()">Export to CSV</button>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+            <button id="modalCloseButton" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="DataEntry.js"></script>
+</body>
+</html>
